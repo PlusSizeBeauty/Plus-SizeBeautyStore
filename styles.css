@@ -51,8 +51,12 @@ button {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   background: linear-gradient(90deg, #f1dce5 0%, #f5eaf0 45%, #f5dce7 100%);
   border-bottom: 1px solid rgba(34, 25, 31, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .nav-wrap {
@@ -171,11 +175,16 @@ button {
   font-weight: 700;
   color: var(--dark);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .lang-btn.active {
   background: var(--brand-pink);
   color: white;
+}
+
+.lang-btn:hover {
+  background: rgba(240, 95, 153, 0.12);
 }
 
 .header-icons {
@@ -249,6 +258,13 @@ button {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 16px 28px rgba(226, 69, 134, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 34px rgba(226, 69, 134, 0.25);
+  filter: saturate(1.08);
 }
 
 .collection-section,
@@ -273,6 +289,13 @@ button {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mini-card:hover,
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(168, 83, 108, 0.18);
 }
 
 .mini-photo,
