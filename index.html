@@ -7,6 +7,8 @@
     <title>PlusSizeBeauty | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -20,7 +22,6 @@
             <span class="brand-tag" data-i18n="brandTag">Fashion • Beauty • Confidence</span>
           </div>
         </div>
-
         <nav class="main-nav" aria-label="Main navigation">
           <a href="index.html" class="active" data-i18n="navHome">Home</a>
           <a href="index.html" data-i18n="navFashion">Fashion</a>
@@ -32,73 +33,57 @@
           <a href="#" data-i18n="navShop">Shop</a>
           <a href="#" data-i18n="navAbout">About</a>
         </nav>
-
         <div class="header-tools">
           <div class="lang-switcher" aria-label="Language selector">
             <button class="lang-btn active" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="es">ES</button>
             <button class="lang-btn" data-lang="fr">FR</button>
           </div>
-          <div class="header-icons" aria-label="Header actions">
-            <span>⌕</span>
-            <span>♡</span>
-            <span>🛍</span>
-          </div>
+          <div class="header-icons" aria-label="Header actions"><span>⌕</span><span>♡</span><span>🛍</span></div>
         </div>
       </div>
     </header>
-
     <main>
       <section class="fashion-hero">
         <div class="container hero-grid">
           <div class="hero-portrait-wrap">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Woman wearing a bold fashion look" />
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Woman wearing a bold fashion look" />
           </div>
-
           <div class="hero-copy">
             <h1 data-i18n="fashionTitle">Fashion</h1>
             <h2 data-i18n="fashionSubtitle">Trendy Looks For Every Curve</h2>
             <p data-i18n="fashionText">Discover styles, fits, and outfit ideas that celebrate your shape and make you feel amazing.</p>
-            <button type="button" class="button button-primary" data-i18n="shopFashionBtn">Shop Fashion</button>
+            <a class="button button-primary" href="#fashion-collections" data-i18n="shopFashionBtn">Shop Fashion</a>
           </div>
         </div>
       </section>
-
-      <section class="collection-section">
-        <div class="container collection-grid">
+      <section class="collection-section" id="fashion-collections" aria-label="Fashion collections">
+        <div class="container collection-grid four-up">
           <article class="mini-card">
-            <img class="mini-photo photo-dress" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Fashionable dress outfit" style="width: 100%; height: 220px; object-fit: cover;" />
+            <img class="mini-photo" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Dress outfit inspiration" loading="lazy" />
             <div class="mini-label" data-i18n="cardDress">Dresses</div>
           </article>
-
           <article class="mini-card">
-            <img class="mini-photo photo-top" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Fashion top outfit" style="width: 100%; height: 220px; object-fit: cover;" />
+            <img class="mini-photo" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Top outfit inspiration" loading="lazy" />
             <div class="mini-label" data-i18n="cardTop">Tops</div>
           </article>
-
           <article class="mini-card">
-            <img class="mini-photo photo-jeans" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80" alt="Jeans outfit" style="width: 100%; height: 220px; object-fit: cover;" />
+            <img class="mini-photo" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Jeans outfit inspiration" loading="lazy" />
             <div class="mini-label" data-i18n="cardJeans">Jeans</div>
           </article>
-
           <article class="mini-card">
-            <img class="mini-photo photo-activewear" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Activewear outfit" style="width: 100%; height: 220px; object-fit: cover;" />
+            <img class="mini-photo" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Activewear outfit inspiration" loading="lazy" />
             <div class="mini-label" data-i18n="cardActivewear">Activewear</div>
           </article>
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
       <div class="container footer-wrap">
         <div class="footer-brand-block">
           <div class="brand-mark small">P</div>
-          <div>
-            <span class="footer-brand">PlusSizeBeauty</span>
-            <small data-i18n="brandTagFooter">Fashion • Beauty • Confidence</small>
-          </div>
+          <div><span class="footer-brand">PlusSizeBeauty</span><small data-i18n="brandTagFooter">Fashion • Beauty • Confidence</small></div>
         </div>
-
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="index.html" data-i18n="navHome">Home</a>
           <a href="beauty.html" data-i18n="navBeauty">Beauty</a>
@@ -110,7 +95,6 @@
         </nav>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
