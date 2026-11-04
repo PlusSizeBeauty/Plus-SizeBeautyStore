@@ -1,118 +1,223 @@
-# Shopify completion plan
+# Shopify store: start-to-finish checklist
 
-This guide ties the existing static concept to the Shopify store. The latest status below comes from the store report supplied in the conversation, not a live Admin check by this repository. Re-check each item in Admin before acting.
+This is the practical setup and launch guide for PlusSizeBeauty. It is written for the reported Shopify state, but Shopify Admin must be checked as you go because settings may have changed. The repository is a static design concept; Shopify is the actual store, catalog, admin, cart, checkout, and order system.
 
-## What exists and what remains
+> **Important:** You can prepare the store without inventing anything. You cannot responsibly sell until real product information, business details, payment/shipping/tax choices, and policies are supplied and checked. Keep the storefront password on until the final launch steps.
 
-| Area | Reported state | Completion condition |
-| --- | --- | --- |
-| Collections | Four departments and 15 subcategories exist; all are empty | Confirm handles/titles and keep these collections; no duplicates |
-| Products | 0 | Add only real, owner-verified products and variants |
-| Store identity | Display name is “My Store” | Saved display name is PlusSizeBeauty; do not alter legal details without the owner |
-| Pages | Contact and Your Privacy Choices exist; About Us missing | Create a factual About page and verify its visibility |
-| Navigation | Main: Home, Catalog, Contact. Footer: Search, Your Privacy Choices | Menus link to existing pages/collections; no dead `#` links |
-| Theme | Horizon is live; custom concept design not verified | Configure and preview a draft theme; do not publish without owner approval |
-| Languages | Spanish/French not verified | Configure and human-review translations before making them available |
-| Launch settings | Password on; payments, shipping, taxes, policies, contact details unconfirmed | Owner completes and verifies settings, then tests checkout before launch |
+## What the store report says is already in place
 
-## How the parts fit together
+- Four department collections: Fashion, Beauty, Hair Care, Skin Care.
+- Fifteen category collections: Dresses, Tops, Jeans, Activewear; Face Makeup, Eye Makeup, Lip Makeup, Makeup Tools; Conditioner, Shampoo, Hair Treatments; Cleansers, Moisturizers, Serums, Skin Treatments.
+- All collections were reported empty (0 products).
+- Horizon theme is live; password protection is on.
+- Store display name was reported as “My Store.”
+- About Us is missing. Main menu was Home, Catalog, Contact; footer menu Search, Your Privacy Choices.
+- Products are 0. Spanish/French, payments, shipping, taxes, policies, and business contact settings were not confirmed.
 
-Shopify owns commerce data and workflow: collections group products, products carry variant/price/inventory data, Shopify’s theme renders the catalog and product pages, and Shopify handles cart and checkout. The repository is a visual reference and documentation source; it is not wired to the Shopify store. Do not build a parallel browser-based admin or expose Admin API credentials.
+**Treat these as a prior report, not a live check. Verify them in Admin. Do not recreate existing collections.**
 
-The collections already created provide the category skeleton:
+## Before you start: gather the owner-only information
 
-- Fashion: Dresses, Tops, Jeans, Activewear
-- Beauty: Face Makeup, Eye Makeup, Lip Makeup, Makeup Tools
-- Hair Care: Conditioner, Shampoo, Hair Treatments
-- Skin Care: Cleansers, Moisturizers, Serums, Skin Treatments
+Have these items ready. Do not paste passwords, payment credentials, or secret keys into chat or this repository.
 
-Check each collection’s conditions and handle. Add product listings only after the owner has provided accurate product details. The empty collections are expected until then.
+### Product information (one row/product in `data/products-template.csv`)
 
-## Execution order
+- Accurate product title and description; vendor/brand; product type.
+- Real price and store currency; SKU and barcode if used.
+- Actual inventory quantity and whether inventory is tracked.
+- Product photos you own or are licensed to use, plus useful alt text.
+- Correct collection(s) and tags.
+- Real variants only: apparel sizes/colors; cosmetic shades or other actual options; variant-specific price/SKU/stock if they differ.
+- Product ingredients, warnings, sizing, materials, claims, certifications, and shipping weight only when verified and applicable.
 
-### 1. Confirm baseline and preserve the live store
+The CSV in this repo is an **intake worksheet**, not Shopify’s import format. Use Shopify’s current product CSV template for import; field names and variant rows must match that template. For a small catalog, entering products manually is usually easiest.
 
-In Shopify Admin, confirm the store identity, collection list, product count, menus, theme, password protection, and current settings. Keep the storefront password enabled. Do not recreate collections or publish a theme as part of this verification.
+### Store and launch decisions
 
-**Pass when:** the owner has a current inventory of what exists, and the live theme/password state is recorded.
+- Legal business name, business address, customer support email and phone.
+- Payment provider setup, completed privately in Shopify.
+- Countries/regions to sell and ship to; shipping origin, carriers/rates, fulfillment method, delivery promises.
+- Tax registrations and decisions appropriate to your business and jurisdictions.
+- Return/refund, privacy, terms, and shipping policy wording reviewed for your business and location.
+- Domain you own/control (optional; Shopify’s `myshopify.com` domain can be used to preview).
+- Human reviewers for Spanish and French if those languages will be offered.
+- Final approval to publish the theme and remove storefront password protection.
 
-### 2. Store name and About page
+Shopify settings and legal/tax requirements vary by location and account. Use qualified local advice where needed; do not copy another store’s legal text or guess rates/rules.
 
-Change the customer-facing display name to PlusSizeBeauty in the appropriate store details setting. Create an About Us page using only verified information. Safe starter copy, if the owner approves it: “PlusSizeBeauty is an online store focused on fashion and beauty for plus-size women.” Do not invent a founder story, location, company history, or product promises. Keep the page unpublished/draft if the editor allows it until reviewed.
+## Phase 1 — Verify the current store and protect it
 
-**Owner input:** legal business name and contact details belong in their designated settings, not in invented page copy.
+1. Sign in to Shopify Admin for the correct store.
+2. Open **Products > Collections**. Confirm that the 19 expected collections exist. Check their titles and collection type/conditions; do not create duplicates.
+3. Open **Products** and confirm the current product count. If products have appeared, review them rather than importing duplicates.
+4. Open **Online Store > Themes**. Confirm Horizon is still live. Leave the password protection enabled.
+5. Open **Content > Menus** (in some Admin layouts this may appear under **Online Store > Navigation**). Record the current Main menu and Footer menu before editing.
+6. Check **Settings > Store details** for the display name and store contact details. Do not change legal details as a side effect.
 
-**Pass when:** the saved display name is confirmed and the About page exists with reviewed factual content.
+**Done when:** the current collection, product, menu, theme, store-name, and password states are noted. If state differs from the report, use Admin’s current saved state and update this checklist.
 
-### 3. Navigation
+## Phase 2 — Set the store display name and About page
 
-Edit the existing menus instead of creating duplicates. Main menu should point to Home, the four department collections, About Us, and Contact. Add category links beneath departments only if the theme/menu supports clear nesting. Footer should link to existing Contact, About Us, Search, and actually existing policy pages. Do not link to missing pages or use placeholder URLs.
+### Change the display name
 
-**Pass when:** every menu link opens the intended destination on desktop and mobile.
+1. In Admin, open **Settings > Store details**.
+2. Find the store name/display name field, enter **PlusSizeBeauty**, and save.
+3. Reopen or refresh the setting and verify the saved value.
+4. Do not replace the legal business name or legal address unless the owner has provided verified details and intends to change them.
 
-### 4. Draft theme design
+### Create About Us
 
-Keep Horizon. Make changes in a duplicate/unpublished theme if available. Build a home page with a welcoming hero, accessible links to the four departments, and featured products only when real products exist. Use the existing rose palette and typography as visual inspiration, but prioritize readability and mobile layout. Use real approved images or leave image slots empty; do not present stock placeholders as store products. Ensure the search and cart controls are actual theme functions.
+1. Open **Online Store > Pages** (some layouts expose pages under **Content > Pages**).
+2. Select **Add page**.
+3. Title it **About Us**. Use only this factual starter copy, editing only with verified facts:
 
-**Pass when:** a preview is reviewed on desktop and mobile; links, focus states, contrast, image alt text, and empty collection states are checked. Do not publish without owner approval.
+   > PlusSizeBeauty is an online store focused on fashion and beauty for plus-size women.
 
-### 5. Real product information
+4. Set visibility to hidden/draft while reviewing, if that option is available. Save.
+5. Preview the page. Publish/enable its visibility only after the owner approves the wording.
 
-The worksheet at `data/products-template.csv` is for gathering data, not direct import. For every product, the owner supplies and verifies title, description, brand/vendor, price/currency, images and image rights, SKU/barcode if applicable, inventory, product type, tags, and collection. Add only applicable variants (e.g. actual sizes/colors for apparel or actual shades for cosmetics). Do not invent stock, prices, ingredient lists, efficacy claims, sizes, or certifications.
+**Done when:** the display name is saved and the About page exists and its visibility is known.
 
-After the worksheet is complete, map fields to Shopify’s current official product CSV format or enter products through Products in Admin. Preview the import and inspect variants, prices, inventory tracking, product status, and collection membership before making products available.
+## Phase 3 — Connect the navigation to real Shopify destinations
 
-**Pass when:** each product is real, reviewed, correctly assigned, has working variants/images, and its status is intentional (draft or active).
+1. Open **Content > Menus** or **Online Store > Navigation**.
+2. Edit the existing **Main menu**; do not make a duplicate.
+3. Add or correct these links:
+   - Home → Home page
+   - Fashion → the existing Fashion collection
+   - Beauty → the existing Beauty collection
+   - Hair Care → the existing Hair Care collection
+   - Skin Care → the existing Skin Care collection
+   - About Us → the About Us page
+   - Contact → the existing Contact page
+4. If the menu editor supports nesting, add the existing subcategory collections under their matching department. Use the actual collection destination selected from Shopify’s link picker, not guessed URLs.
+5. Edit the existing **Footer menu**. Keep Search if useful; add Contact, About Us, and only policy/pages that actually exist and have been reviewed. Remove obsolete or broken items. Keep “Your Privacy Choices” only if it is required and configured for the store’s privacy setup.
+6. Save each menu. Open the storefront preview and click every link, including nested links, on desktop and mobile.
 
-### 6. Languages
+**Done when:** all menu destinations resolve to the intended existing collection/page and no placeholder/dead links remain.
 
-Keep English as the default. Shopify’s translation workflow must cover theme labels, navigation, pages, collection names/descriptions, and all product/variant content. Spanish and French should be enabled only after a fluent reviewer checks the actual content. Do not assume the static prototype’s localStorage language switcher translates Shopify checkout or product data. Brazilian Portuguese is a later decision based on audience demand.
+## Phase 4 — Style the Horizon theme safely
 
-**Pass when:** a reviewer verifies translated pages and product content, and the language selector takes customers to the intended locale.
+1. In **Online Store > Themes**, use the theme action menu to duplicate Horizon (wording may be **Duplicate** or **Create duplicate**). Make design changes in the unpublished copy, not the live theme.
+2. Open **Customize** on the duplicate. Select the home page template.
+3. Arrange the home page in this order:
+   - Brand/hero section with clear PlusSizeBeauty positioning.
+   - Four visible department links: Fashion, Beauty, Hair Care, Skin Care.
+   - Featured collections or products only if there are real, approved products. With an empty catalog, show category navigation and do not fabricate products.
+   - Footer with working Contact/About/policy links.
+4. Use the repository’s rose/pink palette and elegant serif heading style as inspiration, while preserving readable contrast and Horizon’s responsive behavior. Use only approved images; set meaningful alt text. If approved images are not ready, use the theme’s neutral placeholder or omit the image rather than presenting unlicensed stock as a real product.
+5. Keep theme search and cart controls if they are functional. Remove or disable any element that looks clickable but has no destination/action.
+6. Preview the duplicate theme. Check desktop and mobile widths, keyboard focus, text contrast/readability, menu behavior, collection links, empty collection messaging, and footer links.
+7. Save the draft theme. **Do not publish it yet.** Record the preview link and confirm Horizon remains the live theme.
 
-### 7. Business and checkout settings (owner-only inputs)
+**Done when:** the unpublished theme preview passes the checks and the owner has reviewed it.
 
-In Shopify Admin, review store contact details, payments, shipping and delivery, taxes/duties, checkout, and policies. The owner must supply/approve legal name, address, contact email/phone, payment provider/account details, tax registrations/decisions, shipping origin/rates/regions, returns/refunds terms, and legal policy text. Do not guess or activate anything based on placeholders. Obtain qualified advice for legal or tax decisions where needed.
+## Phase 5 — Enter real products into the existing collections
 
-**Pass when:** the owner has saved and verified each required setting and test checkout behavior matches the intended market and fulfillment plan.
+Do not create fake sample listings. First fill the worksheet in `data/products-template.csv` with verified facts. Leave unknown fields blank rather than guessing.
 
-### 8. QA and launch
+### Simple method: add products one at a time
 
-Keep password protection on until the owner authorizes launch. Preview/test navigation, collection pages, product details, variants, inventory behavior, search, cart, checkout, mobile behavior, accessibility basics, translations, contact details, and policy links. Use Shopify’s safe test/payment testing options as available; do not place a real order or charge a payment method unless the owner explicitly intends to.
+For each real product:
 
-**Pass when:** all tests pass, real products and owner settings are present, preview is approved, and the owner explicitly removes password protection/publishes the approved theme.
+1. In Admin, open **Products > Add product**.
+2. Enter the verified title and description.
+3. Add the approved images and useful alt text.
+4. Set the real price and applicable tax setting based on the owner’s verified tax decisions.
+5. Add SKU/barcode if actually used; set the verified vendor and product type.
+6. Add only real variants. Enter the actual variant price/SKU/inventory as applicable. Do not add generic sizes or shades that the product does not have.
+7. Configure inventory tracking and quantity from the owner’s stock count. Select the correct sales channels/status; keep as Draft until reviewed.
+8. Assign the product to its existing department and relevant existing subcategory collection(s). Check tags and product organization.
+9. Save. Preview the product page and verify each variant, image, price, inventory behavior, and collection assignment.
+10. After review, change product status to Active only when the owner intends it to be purchasable.
 
-## Owner information needed
+### Bulk method: Shopify product CSV
 
-- Real product data and image rights; product variants, stock and prices.
-- Legal business name, business address, customer service email/phone.
-- Payment provider setup and authorization.
-- Selling locations, tax registrations/decisions, shipping regions/origin/rates and fulfillment/returns approach.
-- Approved policies and any domain choice.
-- Human reviewers for Spanish and French, if those languages are to be launched.
-- Final approval to publish the theme and disable storefront password protection.
+1. In **Products**, use the current Shopify **Export**/CSV template or Shopify’s current product CSV documentation/template. Do not directly import this repository’s intake worksheet.
+2. Map and validate every row against Shopify’s template, including variant rows and image URLs.
+3. Export/backup existing products first if any now exist.
+4. Import a small test file or a few products first. Review the import result and product records before importing the rest.
+5. Verify collection membership—CSV import behavior may not assign collections the way you expect. Use Admin’s collection/product organization or collection conditions, then inspect each collection.
+6. Keep products Draft until content, price, images, inventory, and variants are checked.
 
-Do not send payment credentials, passwords, or secret keys into chat or commit them to this repository.
+**Done when:** every intended listing is authentic, accurate, reviewed, assigned correctly, and has an intentional Draft/Active status. Product count and each collection’s contents match the owner’s inventory.
 
-## Prompt to continue in Shopify chat
+## Phase 6 — Languages (after English content is approved)
 
-Paste this after confirming the state in Admin:
+1. Keep English as the default until English theme text, pages, collection copy, and product content are final.
+2. In Admin, find **Settings > Languages** or the store’s language/translation area and review Shopify’s currently available translation workflow/apps (for example, Shopify Translate & Adapt if available for the store).
+3. Add Spanish and French only if the workflow covers the storefront and product/collection content—not just the theme buttons.
+4. Have a fluent human reviewer edit/review translations for product meaning, size/shade names, policies, and customer-facing instructions. Do not publish unreviewed machine translations.
+5. Preview each language and test language switching, navigation, product pages, cart, and the checkout language options available for the store.
+6. Add Brazilian Portuguese later only if customer demand, fulfillment, and support justify maintaining it.
+
+**Done when:** the owner confirms every translated part and language switching behaves correctly. Until then, leave additional languages unpublished/unavailable.
+
+## Phase 7 — Owner completes business, payment, shipping, tax, and policy settings
+
+These settings depend on facts only the business owner can verify. The assistant or guide must not fill them with guesses.
+
+1. **Contact:** open **Settings > Store details** and enter verified customer-facing contact details. Confirm the Contact page shows the correct channel.
+2. **Payments:** open **Settings > Payments**. Choose and activate the intended provider only after the owner completes provider onboarding and authorizes it. Never paste credentials into chat or GitHub.
+3. **Shipping:** open **Settings > Shipping and delivery**. Set shipping origin, destinations, package/fulfillment details, and rates from the actual business plan. Test eligible addresses and rates.
+4. **Taxes/duties:** open **Settings > Taxes and duties**. The owner verifies registrations and obligations for each selling region; consult a qualified tax professional as needed. Do not infer tax settings from the store currency or domain.
+5. **Policies:** open **Settings > Policies** (or the current policy area). Draft/review refund, privacy, terms of service, and shipping policies for the actual business and applicable locations. Add actual contact/return details. Do not publish template text without review.
+6. **Checkout:** open **Settings > Checkout**. Review customer contact method, checkout fields, marketing consent, and order processing options. Keep only choices the owner intends.
+7. **Domain:** open **Settings > Domains**. Connect a domain the owner controls, if desired; follow Shopify’s domain connection instructions and verify DNS/SSL before using it as primary. A custom domain is optional; do not buy or change one without owner approval.
+
+**Done when:** the owner has saved and verified each setting, and test checkout shows the expected currency, destination, shipping, tax, and policy links.
+
+## Phase 8 — Final test and publish
+
+Do this only after real products, owner settings, and draft theme are reviewed.
+
+### Test before launch
+
+- Main and footer menus work; all collection links go to the right collections.
+- Each department and subcategory displays the intended products; no incorrect/empty placeholders are presented as merchandise.
+- Product titles, descriptions, images/alt text, prices, variants, stock, and availability are correct.
+- Search returns expected products; cart add/update/remove behavior works.
+- Test checkout using Shopify’s available test mode/test provider where possible. Do not charge a real payment method or place an unintended order.
+- Shipping/tax estimates match owner-verified rules for representative destinations.
+- Contact, About, policy, and privacy links work and show approved content.
+- Mobile layout, keyboard access, focus visibility, labels, and contrast are acceptable.
+- Spanish/French only appear if reviewed and ready.
+- Password protection is still on during testing; order notifications and fulfillment workflow are understood.
+
+### Publish the theme
+
+1. In **Online Store > Themes**, open the reviewed draft/duplicate Horizon theme.
+2. Confirm its preview is approved and the owner intends to make it public.
+3. Use the theme action menu’s **Publish** action and confirm Shopify’s prompt. Verify the theme is now marked **Current theme**. If the owner is not ready, leave it unpublished.
+
+### Remove password protection / open the store
+
+1. Only after payment, shipping, tax, policy, product, and checkout checks pass, open **Online Store > Preferences** (in some Admin versions, password/storefront visibility is in the Online Store sales channel settings).
+2. Find storefront password protection and disable/remove the password. Shopify may require an eligible plan or store setup before removal; follow the current Admin message rather than bypassing it.
+3. Save. Open the public domain in a private/incognito browser and confirm the public storefront loads, products can be browsed, and checkout is available as intended.
+4. Verify the custom domain and SSL if configured. Keep a record of the launch time and the owner’s approval.
+
+**Launch is complete only when:** the published theme is the intended theme, password protection is intentionally off, the public site is reachable, checkout tests pass, and the owner confirms readiness.
+
+## Stop/go checklist
+
+Do **not** publish or remove the password if any of these are missing:
+
+- Real approved product data, imagery rights, prices, variants, and inventory.
+- Verified business contact information.
+- Owner-completed payment, shipping, and tax setup.
+- Reviewed policies and functioning contact route.
+- Theme/menu/product/mobile/checkout tests passed.
+- Owner approval to make the site public.
+
+## Shopify chat prompt
+
+Paste this prompt into Shopify chat to have it assist with tasks it can access. It cannot replace owner-only decisions or the final Admin action if its tools do not expose one. Ask it to report verified changes, not merely planned ones.
 
 ```text
-Continue from the CURRENT saved Shopify Admin state. Do not start over, duplicate the existing collections, or claim work is complete unless you verify it.
+Help me complete the existing PlusSizeBeauty Shopify store from its current saved state. Do not recreate collections or duplicate menus. First verify current Admin state. Work through the phases in docs/SHOPIFY_LAUNCH_PLAN.md in order: verify; display name/About page; navigation; unpublished Horizon theme; real products only; reviewed translations; owner-specific checkout settings; QA; publish theme; remove password only at final launch.
 
-Use Shopify as the only commerce/admin system. Keep password protection enabled and do not publish the live theme, activate payments, or change tax/shipping/legal settings using guesses.
+Use Shopify as the only commerce system. Never invent product data, images, prices, stock, business/legal details, tax or shipping settings, payment credentials, or policy terms. Do not publish the theme, activate payments, or disable password protection unless the owner has supplied the required real details and explicitly authorized launch.
 
-Work in this order:
-1. Verify and report the existing collections, products, store name, pages, menus, live theme, password state, and settings. Reuse the existing 19 collections.
-2. Change only the customer-facing display name to PlusSizeBeauty, if you can save and verify it. Do not alter legal business details.
-3. Create a factual About Us draft using only: “PlusSizeBeauty is an online store focused on fashion and beauty for plus-size women.” Do not invent history or claims.
-4. Edit existing menus to link Home, Fashion, Beauty, Hair Care, Skin Care, About Us, Contact, and only pages/collections that actually exist. Verify each destination and do not create duplicate menus.
-5. Prepare a duplicate/unpublished Horizon theme with the existing rose/pink and elegant typography direction. Build a homepage linking to the four existing departments. Do not publish it. Do not show fake products or nonfunctional search/cart controls.
-6. Do not create products: the store has no verified product data yet. Give me the exact product fields to provide and the current Shopify Admin steps to add/import them into the existing collections.
-7. Keep English as default. Explain the verified Shopify workflow for Spanish/French, but do not publish machine-generated or unreviewed translations.
-8. List the exact owner inputs and Admin paths for contact, payments, shipping, taxes, policies, and domain. Do not invent or save these settings.
-9. Provide a prelaunch test checklist. Keep the password on and theme unpublished.
-
-For every task, label it Completed and verified, Blocked on owner input, or Unable to perform. If unable, give exact current Admin menu path and clicks. Continue with other safe tasks rather than stopping. End with a concise status report and do not say launch-ready until real products, owner settings, tests, and owner approval are complete.
+For every task, report one of: Completed and verified, Needs owner information, or Unable to perform. If unable, give the current Admin path and exact next clicks. Do not claim a save unless you verified the saved state. Continue with other safe tasks instead of asking broad questions. At the end provide the remaining owner tasks and the launch checklist.
 ```
