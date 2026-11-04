@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1300" role="img" aria-labelledby="title desc">
+  <title id="title">PlusSizeBeauty contact artwork</title>
+  <desc id="desc">A premium plus-size beauty brand illustration with a gold-framed portrait, pink tones, and the words Plus Size Beauty.</desc>
+  <defs>
+    <linearGradient id="bgGlow" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fdf2f5"/>
+      <stop offset="100%" stop-color="#f7e3ea"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f5d77d"/>
+      <stop offset="35%" stop-color="#dca836"/>
+      <stop offset="60%" stop-color="#f6db8c"/>
+      <stop offset="100%" stop-color="#b7771d"/>
+    </linearGradient>
+    <radialGradient id="pinkHalo" cx="50%" cy="42%" r="42%">
+      <stop offset="0%" stop-color="#f7cfdb"/>
+      <stop offset="100%" stop-color="#f4d9e3"/>
+    </radialGradient>
+    <linearGradient id="dress" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d4256d"/>
+      <stop offset="100%" stop-color="#8a1d52"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f0caae"/>
+      <stop offset="50%" stop-color="#d69472"/>
+      <stop offset="100%" stop-color="#b05d41"/>
+    </linearGradient>
+    <linearGradient id="hairDark" x1="0" x2="1">
+      <stop offset="0%" stop-color="#2b120d"/>
+      <stop offset="32%" stop-color="#3b1d17"/>
+      <stop offset="57%" stop-color="#7c3d1a"/>
+      <stop offset="100%" stop-color="#2e180f"/>
+    </linearGradient>
+    <linearGradient id="hairGold" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f7d2a0"/>
+      <stop offset="50%" stop-color="#d6a159"/>
+      <stop offset="100%" stop-color="#8d5b25"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#5b2b3f" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1300" fill="url(#bgGlow)"/>
+  <circle cx="600" cy="470" r="470" fill="url(#pinkHalo)" opacity="0.7"/>
+  <circle cx="600" cy="470" r="420" fill="none" stroke="url(#gold)" stroke-width="18"/>
+  <path d="M520 370c-18-104 22-186 112-228 102-47 248-20 317 89 31 49 47 113 38 170-8 57-24 100-38 129-32 67-116 108-206 112-129 4-224-43-282-123-24-33-41-78-42-149z" fill="url(#hairDark)" opacity="0.9"/>
+  <path d="M430 360c33-135 126-204 236-213 118-10 249 56 300 195 17 48 22 101 12 157-29 155-168 249-308 241-138-8-245-91-272-213-10-45-3-96 32-167z" fill="url(#hairDark)" opacity="0.92"/>
+  <path d="M488 375c45-77 126-119 222-119 97 1 194 54 245 143 21 38 34 84 32 129-5 124-90 203-201 218-147 19-283-79-312-204-9-38-9-117 14-167z" fill="url(#hairGold)" opacity="0.95"/>
+  <path d="M514 385c28-60 94-108 183-111 111-4 218 68 242 168 17 71-2 154-60 209-57 52-158 78-253 49-118-37-200-176-194-287 2-14 7-20 82-28z" fill="url(#hairDark)" opacity="0.92"/>
+
+  <path d="M514 566c13-89 60-150 162-165 105-15 226 39 267 138 37 88-9 208-126 246-133 43-294-6-325-119-12-42-7-70 22-100z" fill="url(#skin)"/>
+  <path d="M567 564c31-32 76-43 142-41 72 2 124 32 148 71 37 62 23 120-33 170-58 52-164 64-235 20-58-36-96-101-88-152 3-22 14-44 66-68z" fill="url(#skin)"/>
+  <path d="M540 690c26-47 80-72 160-72 91 0 159 33 179 85 18 49 0 109-44 150-42 39-118 63-190 63-77 0-136-32-175-86-26-35-30-72-18-107 12-23 27-28 88-33z" fill="url(#dress)" filter="url(#softShadow)"/>
+  <path d="M598 693l-50 64 77 86 82-85-43-65z" opacity="0.9" fill="#a01856"/>
+  <path d="M646 620c10-10 27-18 44-18 28 0 64 12 76 53 10 35-8 72-44 89-27 12-61 18-95 12-28-5-49-27-55-52-8-35 8-70 74-84z" fill="#f2c4b8" opacity="0.65"/>
+  <path d="M544 569c20-22 42-34 82-39 50-6 123 4 157 45 27 32 41 74 35 123-5 44-25 76-48 96-26 23-58 39-96 42-49 3-118-9-157-39-34-27-58-69-56-117 1-38 36-89 83-111z" fill="url(#skin)" opacity="0.98"/>
+
+  <ellipse cx="607" cy="603" rx="77" ry="105" fill="#f0c7af" opacity="0.74"/>
+  <path d="M532 603c22-13 47-18 72-17 31 1 61 11 87 27 17 11 28 28 33 44-16 26-46 35-81 39-48 5-94-12-116-43-9-12-8-34 5-50z" fill="#f2d1b8"/>
+  <path d="M530 607c43-11 72-13 106-12 36 0 76 5 112 21-15 53-52 74-110 81-70 7-130-19-140-55-8-22 9-27 32-35z" fill="#f8d8c8" opacity="0.8"/>
+  <path d="M566 630c28-5 48-5 67 0 2 13-3 25-12 34-10 10-28 14-48 9-18-4-25-16-21-27 4-7 8-12 14-16z" fill="#3d1b14" opacity="0.72"/>
+  <path d="M555 700c9 4 18 7 24 7 10 0 17-4 21-10 8 14 12 31 12 49v8h-86v-6c0-18 9-35 29-48z" fill="#bf3d7a" opacity="0.72"/>
+
+  <path d="M560 635c-23 0-42 18-43 40 0 26 18 47 43 48 30 2 55-28 54-54-1-25-28-34-54-34z" fill="#f2d2af"/>
+  <path d="M655 635c-23 0-42 18-43 40 0 26 18 47 43 48 30 2 55-28 54-54-1-25-28-34-54-34z" fill="#f2d2af"/>
+
+  <ellipse cx="570" cy="616" rx="14" ry="18" fill="#2d1d1b"/>
+  <ellipse cx="676" cy="616" rx="14" ry="18" fill="#2d1d1b"/>
+  <circle cx="565" cy="612" r="5" fill="#fff"/>
+  <circle cx="671" cy="612" r="5" fill="#fff"/>
+  <path d="M590 662c22 24 63 23 83 2" stroke="#a9504b" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <circle cx="551" cy="551" r="18" fill="#2d1d1b"/>
+  <circle cx="683" cy="549" r="18" fill="#2d1d1b"/>
+  <path d="M600 565c-8 12-9 25-3 38 11 21 34 24 52 10 10-8 16-18 17-31-24-11-45-16-66-17z" fill="#3d2250" opacity="0.18"/>
+
+  <path d="M520 961c40-62 75-82 117-97 9 26 14 84 6 120-12 55-40 81-90 96-47 15-73-8-91-41-24-46-15-65 58-78z" fill="#d62070" opacity="0.66"/>
+  <path d="M666 892c73 7 132 44 166 96 26 39 19 83-17 119-52 53-138 67-214 24-64-36-86-92-72-135 23-71 91-107 137-104z" fill="#ba2c6a" opacity="0.7"/>
+  <path d="M792 300c40 12 83 26 136 58" stroke="#f7d58b" stroke-width="13" stroke-linecap="round" fill="none"/>
+
+  <g transform="translate(820 615)">
+    <circle cx="0" cy="0" r="36" fill="none" stroke="url(#gold)" stroke-width="10"/>
+    <circle cx="0" cy="0" r="18" fill="#f5d77d"/>
+    <path d="M-10 0h20" stroke="#d27f1d" stroke-width="7" stroke-linecap="round"/>
+    <path d="M0 -10v20" stroke="#d27f1d" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(350 615)">
+    <circle cx="0" cy="0" r="36" fill="none" stroke="url(#gold)" stroke-width="10"/>
+    <circle cx="0" cy="0" r="18" fill="#f5d77d"/>
+    <path d="M-10 0h20" stroke="#d27f1d" stroke-width="7" stroke-linecap="round"/>
+    <path d="M0 -10v20" stroke="#d27f1d" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <path d="M100 420c12-34 33-62 71-80" stroke="#f7dd9f" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M1100 420c-16-25-43-52-74-70" stroke="#f7dd9f" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <rect x="170" y="650" width="860" height="220" rx="92" fill="#f3c7d9" opacity="0.75"/>
+  <path d="M240 812c75-36 167-42 270-8 54 18 119 17 170-17 81-55 171-81 298-52 38 9 69 24 91 41v99H170v-54c19-18 39-23 70-9z" fill="#d11a66" opacity="0.18"/>
+
+  <text x="600" y="895" text-anchor="middle" font-size="160" font-weight="800" font-family="Georgia, 'Times New Roman', serif" fill="#d81d75" style="letter-spacing:1px;">Plus Size</text>
+  <text x="600" y="1015" text-anchor="middle" font-size="150" font-weight="800" font-family="Georgia, 'Times New Roman', serif" fill="#d6a63d" style="letter-spacing:1px;">Beauty</text>
+  <path d="M180 925c83-26 177-18 286 17 73 24 155 35 251 18 104-19 201-66 312-55 34 3 67 10 116 26" fill="none" stroke="url(#gold)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M220 1017c98 17 160 9 245-24 75-29 118-35 210-18 99 18 190 46 310 23" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+
+  <text x="600" y="1090" text-anchor="middle" font-size="60" font-weight="700" font-family="Arial, sans-serif" fill="#b12369" letter-spacing="8">FASHION • BEAUTY • CONFIDENCE</text>
+  <text x="600" y="1180" text-anchor="middle" font-size="78" font-weight="700" font-family="Georgia, 'Times New Roman', serif" fill="#c93d74" font-style="italic">Bigger Beauty. Brighter You.</text>
+</svg>
