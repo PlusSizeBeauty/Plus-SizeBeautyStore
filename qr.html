@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlusSizeBeauty | QR</title>
+    <link rel="stylesheet" href="app.css" />
+    <style>
+      body {
+        background: linear-gradient(180deg, #fff6f9 0%, #fff 100%);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .qr-panel {
+        width: min(440px, 100%);
+        background: #fff;
+        border: 1px solid rgba(34,25,31,0.08);
+        border-radius: 24px;
+        padding: 22px;
+        box-shadow: 0 16px 34px rgba(195,58,115,0.12);
+      }
+
+      .qr-title {
+        margin: 0 0 12px;
+        font-size: 1.4rem;
+      }
+
+      #qrCanvas {
+        width: 100%;
+        max-width: 320px;
+        display: block;
+        margin: 18px auto 0;
+        background: #fff;
+        border-radius: 16px;
+      }
+
+      .qr-link {
+        display: inline-block;
+        margin-top: 16px;
+        color: #c33a73;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="qr-panel">
+      <h1 class="qr-title">Scan to open the store</h1>
+      <svg id="qrCanvas" viewBox="0 0 230 230" aria-label="QR code"></svg>
+      <div style="text-align:center; margin-top:16px;">
+        <a class="qr-link" id="qrLink" href="https://github.com/PlusSizeBeauty/Plus-SizeBeautyStore">Open repository</a>
+      </div>
+    </div>
+
+    <script src="qr.js"></script>
+  </body>
+</html>

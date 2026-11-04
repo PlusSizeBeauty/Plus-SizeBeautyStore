@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f05f99" />
+    <meta name="description" content="PlusSizeBeauty mobile storefront app" />
+    <title>PlusSizeBeauty | Store App</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">P</div>
+          <div>
+            <div class="brand-name">PlusSizeBeauty</div>
+            <div class="brand-tag">Fashion • Beauty • Confidence</div>
+          </div>
+        </div>
+        <button class="bag-button" type="button" aria-label="Shopping bag">
+          <span>🛍</span>
+          <span id="bagCount">0</span>
+        </button>
+      </header>
+
+      <main class="app-main">
+        <section class="hero-card">
+          <p class="eyebrow">Shop the collection</p>
+          <h1>Feel confident in every look.</h1>
+          <div class="hero-actions">
+            <a href="index.html" class="primary-link">View Brand</a>
+            <a href="qr.html" class="secondary-link">Scan QR</a>
+          </div>
+        </section>
+
+        <section class="toolbar">
+          <label class="search-field" aria-label="Search products">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Search products" />
+          </label>
+        </section>
+
+        <section class="filters" id="categoryFilters" aria-label="Product categories"></section>
+
+        <section class="content-grid">
+          <div class="catalog-panel">
+            <div class="panel-header">
+              <h2>Best Sellers</h2>
+              <span id="resultsCount">0 items</span>
+            </div>
+            <div id="productGrid" class="product-grid" aria-live="polite"></div>
+          </div>
+
+          <aside class="bag-panel" aria-label="Shopping bag">
+            <div class="panel-header">
+              <h2>Your Bag</h2>
+              <button id="clearBag" type="button" class="ghost-button">Clear</button>
+            </div>
+            <div id="bagItems" class="bag-items"></div>
+            <div class="bag-total">
+              <span>Total</span>
+              <strong id="bagTotal">$0.00</strong>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
