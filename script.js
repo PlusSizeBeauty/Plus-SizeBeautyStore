@@ -1,166 +1,135 @@
-const translations = {
-  en: {
-    brandTag: 'Fashion • Beauty • Confidence',
-    brandTagFooter: 'Fashion • Beauty • Confidence',
-    navHome: 'Home',
-    navFashion: 'Fashion',
-    navBeauty: 'Beauty',
-    navHair: 'Hair Care',
-    navSkin: 'Skin Care',
-    navStyle: 'Style Guides',
-    navStories: 'Stories',
-    navShop: 'Shop',
-    navAbout: 'About',
-    fashionTitle: 'Fashion',
-    fashionSubtitle: 'Trendy Looks For Every Curve',
-    fashionText: 'Discover styles, fits, and outfit ideas that celebrate your shape and make you feel amazing.',
-    shopFashionBtn: 'Shop Fashion',
-    cardDress: 'Dresses',
-    cardTop: 'Tops',
-    cardJeans: 'Jeans',
-    cardActivewear: 'Activewear',
-    beautyTitle: 'Beauty',
-    beautySubtitle: 'Makeup Picks That Empower',
-    beautyText: 'Enhance your natural beauty with makeup that makes you feel confident, radiant, and unstoppable.',
-    shopBeautyBtn: 'Shop Beauty',
-    faceMakeup: 'Face Makeup',
-    lipMakeup: 'Lip Makeup',
-    eyeMakeup: 'Eye Makeup',
-    makeupTools: 'Makeup Tools',
-    hairTitle: 'Hair Care',
-    hairSubtitle: 'Healthy Hair Beautiful You',
-    hairText: 'Shine, strength, and confidence with the right hair care for your everyday life. Our shampoo and conditioner work together to cleanse, nourish, and keep your hair healthy, soft, and beautiful at every length.',
-    shopHairBtn: 'Shop Shampoo & Conditioner',
-    cleansersGentle: 'Cleansers Gently',
-    nourishesStrengthens: 'Nourishes & Strengthens',
-    addsShine: 'Adds Shine',
-    perfectEveryCurl: 'Perfect for Every Curl',
-    skinTitle: 'Skin Care',
-    skinSubtitle: 'Healthy Skin Beautiful You',
-    skinText: 'Nourish, protect, and pamper your skin with products that work for every curve and every complexion.',
-    shopSkinBtn: 'Shop Skin Care',
-    cleansers: 'Cleansers',
-    moisturizers: 'Moisturizers',
-    serums: 'Serums',
-    treatments: 'Treatments'
+const productData = [
+  {
+    id: 1,
+    name: 'Curvy Fit Wrap Dress',
+    category: 'fashion',
+    department: 'Fashion',
+    retailer: 'Sample Retailer',
+    description: 'A flattering wrap silhouette, soft stretch fabric, and confident fit for everyday styling.',
+    price: 'From $49',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/curvy-fit-wrap-dress',
+    badge: 'Trending'
   },
-  es: {
-    brandTag: 'Moda • Belleza • Confianza',
-    brandTagFooter: 'Moda • Belleza • Confianza',
-    navHome: 'Inicio',
-    navFashion: 'Moda',
-    navBeauty: 'Belleza',
-    navHair: 'Cuidado del cabello',
-    navSkin: 'Cuidado de la piel',
-    navStyle: 'Guías de estilo',
-    navStories: 'Historias',
-    navShop: 'Comprar',
-    navAbout: 'Sobre nosotros',
-    fashionTitle: 'Moda',
-    fashionSubtitle: 'Looks modernos para cada curva',
-    fashionText: 'Descubre estilos, cortes y looks que celebran tu figura y te hacen sentir increíble.',
-    shopFashionBtn: 'Comprar moda',
-    cardDress: 'Vestidos',
-    cardTop: 'Tops',
-    cardJeans: 'Jeans',
-    cardActivewear: 'Ropa deportiva',
-    beautyTitle: 'Belleza',
-    beautySubtitle: 'Cosméticos que empoderan',
-    beautyText: 'Realza tu belleza natural con maquillaje que te hace sentir segura, radiante e imparable.',
-    shopBeautyBtn: 'Comprar belleza',
-    faceMakeup: 'Maquillaje facial',
-    lipMakeup: 'Labios',
-    eyeMakeup: 'Ojos',
-    makeupTools: 'Herramientas',
-    hairTitle: 'Cuidado del cabello',
-    hairSubtitle: 'Cabello sano, tú hermosa',
-    hairText: 'Brillo, fuerza y confianza con el cuidado correcto para tu día a día. Nuestro champú y acondicionador limpian, nutren y mantienen tu cabello sano, suave y hermoso.',
-    shopHairBtn: 'Comprar champú y acondicionador',
-    cleansersGentle: 'Limpieza suave',
-    nourishesStrengthens: 'Nutre y fortalece',
-    addsShine: 'Agrega brillo',
-    perfectEveryCurl: 'Perfecto para cada rizo',
-    skinTitle: 'Cuidado de la piel',
-    skinSubtitle: 'Piel sana, tú hermosa',
-    skinText: 'Nutrí, protege y cuida tu piel con productos que funcionan para cada curva y cada tono.',
-    shopSkinBtn: 'Comprar cuidado facial',
-    cleansers: 'Limpiadores',
-    moisturizers: 'Humectantes',
-    serums: 'Sueros',
-    treatments: 'Tratamientos'
+  {
+    id: 2,
+    name: 'Power Puff Blush',
+    category: 'beauty',
+    department: 'Beauty',
+    retailer: 'Sample Retailer',
+    description: 'A radiant blush with buildable color for a fresh, polished look.',
+    price: 'From $24',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/power-puff-blush',
+    badge: 'Top pick'
   },
-  fr: {
-    brandTag: 'Mode • Beauté • Confiance',
-    brandTagFooter: 'Mode • Beauté • Confiance',
-    navHome: 'Accueil',
-    navFashion: 'Mode',
-    navBeauty: 'Beauté',
-    navHair: 'Soins des cheveux',
-    navSkin: 'Soins de la peau',
-    navStyle: 'Guides de style',
-    navStories: 'Histoires',
-    navShop: 'Boutique',
-    navAbout: 'À propos',
-    fashionTitle: 'Mode',
-    fashionSubtitle: 'Looks tendance pour chaque silhouette',
-    fashionText: 'Découvrez des styles, des coupes et des idées de tenues qui célèbrent votre forme et vous font briller.',
-    shopFashionBtn: 'Voir la mode',
-    cardDress: 'Robes',
-    cardTop: 'Hautes',
-    cardJeans: 'Jeans',
-    cardActivewear: 'Tenue active',
-    beautyTitle: 'Beauté',
-    beautySubtitle: 'Produits qui donnent du pouvoir',
-    beautyText: 'Améliorez votre beauté naturelle avec des produits qui vous font vous sentir confiante, radieuse et irrésistible.',
-    shopBeautyBtn: 'Voir la beauté',
-    faceMakeup: 'Maquillage du visage',
-    lipMakeup: 'Lèvres',
-    eyeMakeup: 'Yeux',
-    makeupTools: 'Outils de beauté',
-    hairTitle: 'Soins des cheveux',
-    hairSubtitle: 'Des cheveux sains, vous resplendissante',
-    hairText: 'Éclat, force et confiance avec des soins adaptés à votre quotidien. Notre shampoing et notre après-shampoing nettoient, nourrissent et gardent vos cheveux sains, doux et magnifiques.',
-    shopHairBtn: 'Voir les soins capillaires',
-    cleansersGentle: 'Nettoyants doux',
-    nourishesStrengthens: 'Nourrit et renforce',
-    addsShine: 'Donne de l’éclat',
-    perfectEveryCurl: 'Parfait pour chaque boucle',
-    skinTitle: 'Soins de la peau',
-    skinSubtitle: 'Une peau saine, vous rayonnante',
-    skinText: 'Nourrissez, protégez et chouchoutez votre peau avec des produits adaptés à chaque silhouette et à chaque carnation.',
-    shopSkinBtn: 'Voir les soins de la peau',
-    cleansers: 'Nettoyants',
-    moisturizers: 'Hydratants',
-    serums: 'Sérums',
-    treatments: 'Traitements'
+  {
+    id: 3,
+    name: 'Hydra Shine Conditioner',
+    category: 'hair',
+    department: 'Hair Care',
+    retailer: 'Sample Retailer',
+    description: 'A hydrating conditioner designed to smooth, soften, and add shine without heaviness.',
+    price: 'From $18',
+    image: 'https://images.unsplash.com/photo-1521590832167-7e1d4b7b3f7b?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/hydra-shine-conditioner',
+    badge: 'New'
+  },
+  {
+    id: 4,
+    name: 'Cloud Dew Cleanser',
+    category: 'skin',
+    department: 'Skin Care',
+    retailer: 'Sample Retailer',
+    description: 'A gentle cleanser that refreshes skin and supports a calm, hydrated feel.',
+    price: 'From $22',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/cloud-dew-cleanser',
+    badge: 'Best seller'
+  },
+  {
+    id: 5,
+    name: 'Everyday Stretch Jeans',
+    category: 'fashion',
+    department: 'Fashion',
+    retailer: 'Sample Retailer',
+    description: 'Stretch denim with a flattering rise and comfort-first feel for daily wear.',
+    price: 'From $58',
+    image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/everyday-stretch-jeans',
+    badge: 'Popular'
+  },
+  {
+    id: 6,
+    name: 'Glow Mist Serum',
+    category: 'skin',
+    department: 'Skin Care',
+    retailer: 'Sample Retailer',
+    description: 'A lightweight serum designed to support hydration and a soft, luminous finish.',
+    price: 'From $30',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/glow-mist-serum',
+    badge: 'Glow booster'
+  },
+  {
+    id: 7,
+    name: 'Curve Lift Lip Tint',
+    category: 'beauty',
+    department: 'Beauty',
+    retailer: 'Sample Retailer',
+    description: 'A smooth, hydrated tint for a fuller-looking finish with natural color payoff.',
+    price: 'From $16',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/curve-lift-lip-tint',
+    badge: 'Fan favorite'
+  },
+  {
+    id: 8,
+    name: 'Silk Volume Shampoo',
+    category: 'hair',
+    department: 'Hair Care',
+    retailer: 'Sample Retailer',
+    description: 'A gentle shampoo that lifts away buildup while keeping hair soft and manageable.',
+    price: 'From $19',
+    image: 'https://images.unsplash.com/photo-1521590832167-7e1d4b7b3f7b?auto=format&fit=crop&w=900&q=80',
+    affiliateUrl: 'https://example.com/affiliate/silk-volume-shampoo',
+    badge: 'New'
   }
-};
+];
 
-const applyTranslations = (lang = 'en') => {
-  const current = translations[lang] || translations.en;
-  document.documentElement.lang = lang;
+const productGrid = document.getElementById('product-grid');
+const filterButtons = document.querySelectorAll('.filter-btn');
 
-  document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const key = element.getAttribute('data-i18n');
-    if (current[key]) {
-      element.textContent = current[key];
-    }
-  });
+function renderProducts(filter = 'all') {
+  const visibleProducts = filter === 'all'
+    ? productData
+    : productData.filter(product => product.category === filter);
 
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-};
+  productGrid.innerHTML = visibleProducts.map(product => `
+    <article class="product-card">
+      <span class="product-badge">${product.badge}</span>
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="product-body">
+        <p class="product-department">${product.department}</p>
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <div class="product-meta">
+          <span>${product.price}</span>
+          <span>${product.retailer}</span>
+        </div>
+        <a class="button product-link" href="${product.affiliateUrl}" target="_blank" rel="noopener noreferrer">
+          View offer
+        </a>
+      </div>
+    </article>
+  `).join('');
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('plus-size-beauty-lang') || 'en';
-  applyTranslations(savedLang);
-
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      localStorage.setItem('plus-size-beauty-lang', lang);
-      applyTranslations(lang);
-    });
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => btn.classList.toggle('active', btn === button));
+    renderProducts(button.dataset.filter);
   });
 });
+
+renderProducts();

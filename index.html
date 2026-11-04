@@ -3,110 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PlusSizeBeauty - Fashion, beauty, and confidence for every curve." />
-    <title>PlusSizeBeauty | Home</title>
+    <meta name="description" content="PlusSizeBeauty offers a curated affiliate storefront for fashion, beauty, hair care, and skin care for plus-size women." />
+    <title>PlusSizeBeauty | Affiliate Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page home-page">
+  <body>
     <header class="site-header">
       <div class="container nav-wrap">
         <div class="brand-block">
           <div class="brand-mark">P</div>
           <div class="brand-copy">
             <span class="brand-name">PlusSizeBeauty</span>
-            <span class="brand-tag" data-i18n="brandTag">Fashion • Beauty • Confidence</span>
+            <span class="brand-tag">Fashion • Beauty • Confidence</span>
           </div>
         </div>
 
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html" class="active" data-i18n="navHome">Home</a>
-          <a href="index.html" data-i18n="navFashion">Fashion</a>
-          <a href="beauty.html" data-i18n="navBeauty">Beauty</a>
-          <a href="hair-care.html" data-i18n="navHair">Hair Care</a>
-          <a href="skin-care.html" data-i18n="navSkin">Skin Care</a>
-          <a href="#" data-i18n="navStyle">Style Guides</a>
-          <a href="#" data-i18n="navStories">Stories</a>
-          <a href="#" data-i18n="navShop">Shop</a>
-          <a href="#" data-i18n="navAbout">About</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="#fashion">Fashion</a>
+          <a href="#beauty">Beauty</a>
+          <a href="#hair">Hair Care</a>
+          <a href="#skin">Skin Care</a>
+          <a href="about.html">About</a>
+          <a href="disclosure.html">Disclosure</a>
         </nav>
-
-        <div class="header-tools">
-          <div class="lang-switcher" aria-label="Language selector">
-            <button class="lang-btn active" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="es">ES</button>
-            <button class="lang-btn" data-lang="fr">FR</button>
-          </div>
-          <div class="header-icons" aria-label="Header actions">
-            <span>⌕</span>
-            <span>♡</span>
-            <span>🛍</span>
-          </div>
-        </div>
       </div>
     </header>
 
     <main>
-      <section class="fashion-hero">
+      <section class="hero-section">
         <div class="container hero-grid">
-          <div class="hero-portrait-wrap">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Woman wearing a bold fashion look" />
+          <div class="hero-copy">
+            <p class="eyebrow">Plus-size wellness and style</p>
+            <h1>Confidence starts with the right fit.</h1>
+            <p class="lead">
+              Discover curated beauty, hair care, skin care, and fashion picks designed to celebrate shape and self-expression.
+            </p>
+            <div class="hero-actions">
+              <a href="#products" class="button primary">Shop the picks</a>
+              <a href="about.html" class="button secondary">Learn more</a>
+            </div>
           </div>
 
-          <div class="hero-copy">
-            <h1 data-i18n="fashionTitle">Fashion</h1>
-            <h2 data-i18n="fashionSubtitle">Trendy Looks For Every Curve</h2>
-            <p data-i18n="fashionText">Discover styles, fits, and outfit ideas that celebrate your shape and make you feel amazing.</p>
-            <button type="button" class="button button-primary" data-i18n="shopFashionBtn">Shop Fashion</button>
+          <div class="hero-visual">
+            <div class="hero-card card-one">
+              <span>Fashion</span>
+            </div>
+            <div class="hero-card card-two">
+              <span>Beauty</span>
+            </div>
+            <div class="hero-card card-three">
+              <span>Hair</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="collection-section">
-        <div class="container collection-grid">
-          <article class="mini-card">
-            <div class="mini-photo photo-dress"></div>
-            <div class="mini-label" data-i18n="cardDress">Dresses</div>
-          </article>
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Categories</p>
+            <h2>Shop by your beauty and style priorities</h2>
+          </div>
 
-          <article class="mini-card">
-            <div class="mini-photo photo-top"></div>
-            <div class="mini-label" data-i18n="cardTop">Tops</div>
-          </article>
+          <div class="category-grid" aria-label="Category grid">
+            <a class="category-card" href="#fashion">
+              <span class="category-icon">✦</span>
+              <span>Fashion</span>
+            </a>
+            <a class="category-card" href="#beauty">
+              <span class="category-icon">◌</span>
+              <span>Beauty</span>
+            </a>
+            <a class="category-card" href="#hair">
+              <span class="category-icon">✧</span>
+              <span>Hair Care</span>
+            </a>
+            <a class="category-card" href="#skin">
+              <span class="category-icon">◍</span>
+              <span>Skin Care</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-          <article class="mini-card">
-            <div class="mini-photo photo-jeans"></div>
-            <div class="mini-label" data-i18n="cardJeans">Jeans</div>
-          </article>
+      <section class="section section-alt" id="products">
+        <div class="container">
+          <div class="section-header split-header">
+            <div>
+              <p class="eyebrow">Recommended picks</p>
+              <h2>Curated for body confidence and everyday care</h2>
+            </div>
+            <div class="filter-bar" aria-label="Product filters">
+              <button class="filter-btn active" data-filter="all" type="button">All</button>
+              <button class="filter-btn" data-filter="fashion" type="button">Fashion</button>
+              <button class="filter-btn" data-filter="beauty" type="button">Beauty</button>
+              <button class="filter-btn" data-filter="hair" type="button">Hair</button>
+              <button class="filter-btn" data-filter="skin" type="button">Skin</button>
+            </div>
+          </div>
 
-          <article class="mini-card">
-            <div class="mini-photo photo-activewear"></div>
-            <div class="mini-label" data-i18n="cardActivewear">Activewear</div>
-          </article>
+          <div id="product-grid" class="product-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section" id="fashion">
+        <div class="container mini-section">
+          <p class="eyebrow">Fashion</p>
+          <h2>Style that fits your shape and your life</h2>
+          <p>
+            Discover flattering fits, flowing silhouettes, and elevated basics that support confidence from day to night.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="beauty">
+        <div class="container mini-section">
+          <p class="eyebrow">Beauty</p>
+          <h2>Makeup and tools that enhance, not hide</h2>
+          <p>
+            Curated color, tools, and formulas that make beauty routines easier and more expressive.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="hair">
+        <div class="container mini-section">
+          <p class="eyebrow">Hair Care</p>
+          <h2>Healthy hair starts with thoughtful care</h2>
+          <p>
+            Gentle cleansing, nourishment, and shine support for daily styling and long-term hair health.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="skin">
+        <div class="container mini-section">
+          <p class="eyebrow">Skin Care</p>
+          <h2>Supportive routines for glow and comfort</h2>
+          <p>
+            Skin-first essentials for hydration, balance, and gentle nourishment across the day.
+          </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <div class="footer-brand-block">
-          <div class="brand-mark small">P</div>
-          <div>
-            <span class="footer-brand">PlusSizeBeauty</span>
-            <small data-i18n="brandTagFooter">Fashion • Beauty • Confidence</small>
-          </div>
+        <div>
+          <div class="footer-brand">PlusSizeBeauty</div>
+          <small>Fashion • Beauty • Confidence</small>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="index.html" data-i18n="navHome">Home</a>
-          <a href="beauty.html" data-i18n="navBeauty">Beauty</a>
-          <a href="hair-care.html" data-i18n="navHair">Hair Care</a>
-          <a href="skin-care.html" data-i18n="navSkin">Skin Care</a>
-          <a href="#" data-i18n="navStories">Stories</a>
-          <a href="#" data-i18n="navShop">Shop</a>
-          <a href="#" data-i18n="navAbout">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="disclosure.html">Disclosure</a>
+          <a href="mailto:hello@plussizebeauty.example">Contact</a>
         </nav>
       </div>
     </footer>
@@ -114,4 +170,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
