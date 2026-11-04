@@ -1,135 +1,61 @@
-const productData = [
-  {
-    id: 1,
-    name: 'Curvy Fit Wrap Dress',
-    category: 'fashion',
-    department: 'Fashion',
-    retailer: 'Sample Retailer',
-    description: 'A flattering wrap silhouette, soft stretch fabric, and confident fit for everyday styling.',
-    price: 'From $49',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/curvy-fit-wrap-dress',
-    badge: 'Trending'
-  },
-  {
-    id: 2,
-    name: 'Power Puff Blush',
-    category: 'beauty',
-    department: 'Beauty',
-    retailer: 'Sample Retailer',
-    description: 'A radiant blush with buildable color for a fresh, polished look.',
-    price: 'From $24',
-    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/power-puff-blush',
-    badge: 'Top pick'
-  },
-  {
-    id: 3,
-    name: 'Hydra Shine Conditioner',
-    category: 'hair',
-    department: 'Hair Care',
-    retailer: 'Sample Retailer',
-    description: 'A hydrating conditioner designed to smooth, soften, and add shine without heaviness.',
-    price: 'From $18',
-    image: 'https://images.unsplash.com/photo-1521590832167-7e1d4b7b3f7b?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/hydra-shine-conditioner',
-    badge: 'New'
-  },
-  {
-    id: 4,
-    name: 'Cloud Dew Cleanser',
-    category: 'skin',
-    department: 'Skin Care',
-    retailer: 'Sample Retailer',
-    description: 'A gentle cleanser that refreshes skin and supports a calm, hydrated feel.',
-    price: 'From $22',
-    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/cloud-dew-cleanser',
-    badge: 'Best seller'
-  },
-  {
-    id: 5,
-    name: 'Everyday Stretch Jeans',
-    category: 'fashion',
-    department: 'Fashion',
-    retailer: 'Sample Retailer',
-    description: 'Stretch denim with a flattering rise and comfort-first feel for daily wear.',
-    price: 'From $58',
-    image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/everyday-stretch-jeans',
-    badge: 'Popular'
-  },
-  {
-    id: 6,
-    name: 'Glow Mist Serum',
-    category: 'skin',
-    department: 'Skin Care',
-    retailer: 'Sample Retailer',
-    description: 'A lightweight serum designed to support hydration and a soft, luminous finish.',
-    price: 'From $30',
-    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/glow-mist-serum',
-    badge: 'Glow booster'
-  },
-  {
-    id: 7,
-    name: 'Curve Lift Lip Tint',
-    category: 'beauty',
-    department: 'Beauty',
-    retailer: 'Sample Retailer',
-    description: 'A smooth, hydrated tint for a fuller-looking finish with natural color payoff.',
-    price: 'From $16',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/curve-lift-lip-tint',
-    badge: 'Fan favorite'
-  },
-  {
-    id: 8,
-    name: 'Silk Volume Shampoo',
-    category: 'hair',
-    department: 'Hair Care',
-    retailer: 'Sample Retailer',
-    description: 'A gentle shampoo that lifts away buildup while keeping hair soft and manageable.',
-    price: 'From $19',
-    image: 'https://images.unsplash.com/photo-1521590832167-7e1d4b7b3f7b?auto=format&fit=crop&w=900&q=80',
-    affiliateUrl: 'https://example.com/affiliate/silk-volume-shampoo',
-    badge: 'New'
-  }
-];
+// Public affiliate offers are intentionally empty until the owner supplies verified
+// products, retailer destinations, and approved affiliate tracking links.
+// Never put credentials or non-public program data in this file.
+const products = [];
 
-const productGrid = document.getElementById('product-grid');
-const filterButtons = document.querySelectorAll('.filter-btn');
+const grid = document.getElementById('product-grid');
+const filterButtons = document.querySelectorAll('[data-filter]');
+
+function safeText(value) {
+  const element = document.createElement('span');
+  element.textContent = String(value ?? '');
+  return element.innerHTML;
+}
+
+function validExternalUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
 
 function renderProducts(filter = 'all') {
-  const visibleProducts = filter === 'all'
-    ? productData
-    : productData.filter(product => product.category === filter);
-
-  productGrid.innerHTML = visibleProducts.map(product => `
-    <article class="product-card">
-      <span class="product-badge">${product.badge}</span>
-      <img src="${product.image}" alt="${product.name}" />
-      <div class="product-body">
-        <p class="product-department">${product.department}</p>
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <div class="product-meta">
-          <span>${product.price}</span>
-          <span>${product.retailer}</span>
-        </div>
-        <a class="button product-link" href="${product.affiliateUrl}" target="_blank" rel="noopener noreferrer">
-          View offer
-        </a>
-      </div>
-    </article>
-  `).join('');
+  if (!grid) return;
+  const visible = products.filter(product => filter === 'all' || product.category === filter);
+  if (visible.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><h3>Recommendations are being prepared</h3><p>We will add products after verifying the product information, image permissions, retailer destination, and affiliate link. We do not make up offers.</p></div>';
+    return;
+  }
+  grid.innerHTML = visible.map(product => {
+    if (!product || !product.name || !product.retailer || !validExternalUrl(product.affiliateUrl)) return '';
+    const image = product.image && validExternalUrl(product.image)
+      ? `<img loading="lazy" src="${safeText(product.image)}" alt="${safeText(product.imageAlt || product.name)}">`
+      : '<div class="product-image-placeholder" aria-hidden="true">PlusSizeBeauty</div>';
+    return `<article class="product-card">${image}<div class="product-body"><p class="product-category">${safeText(product.categoryLabel || product.category)}</p><h3>${safeText(product.name)}</h3><p>${safeText(product.description)}</p><p class="retailer-label">Sold by ${safeText(product.retailer)}</p><a class="button button-primary product-link" href="${safeText(product.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener noreferrer">View at ${safeText(product.retailer)} <span class="visually-hidden"> (opens in a new tab)</span></a><small class="card-disclosure">Affiliate link; we may earn a commission.</small></div></article>`;
+  }).filter(Boolean).join('') || '<div class="empty-state"><h3>No verified recommendations in this category yet</h3><p>Please check back after our links have been reviewed.</p></div>';
 }
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    filterButtons.forEach(btn => btn.classList.toggle('active', btn === button));
-    renderProducts(button.dataset.filter);
+    filterButtons.forEach(item => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    renderProducts(button.dataset.filter || 'all');
   });
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    mainNav.classList.toggle('is-open', !expanded);
+  });
+}
 
 renderProducts();

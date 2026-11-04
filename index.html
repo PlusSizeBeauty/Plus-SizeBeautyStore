@@ -3,170 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PlusSizeBeauty offers a curated affiliate storefront for fashion, beauty, hair care, and skin care for plus-size women." />
-    <title>PlusSizeBeauty | Affiliate Store</title>
+    <meta name="description" content="PlusSizeBeauty shares inclusive fashion and beauty recommendations for every curve." />
+    <meta name="theme-color" content="#fff8f8" />
+    <title>PlusSizeBeauty | Fashion • Beauty • Confidence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <div class="brand-block">
-          <div class="brand-mark">P</div>
-          <div class="brand-copy">
-            <span class="brand-name">PlusSizeBeauty</span>
-            <span class="brand-tag">Fashion • Beauty • Confidence</span>
-          </div>
-        </div>
-
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html" class="active">Home</a>
+        <a class="brand" href="index.html" aria-label="PlusSizeBeauty home">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span class="brand-copy"><strong>PlusSizeBeauty</strong><small>Fashion • Beauty • Confidence</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
           <a href="#fashion">Fashion</a>
           <a href="#beauty">Beauty</a>
-          <a href="#hair">Hair Care</a>
-          <a href="#skin">Skin Care</a>
+          <a href="#hair-care">Hair Care</a>
+          <a href="#skin-care">Skin Care</a>
           <a href="about.html">About</a>
-          <a href="disclosure.html">Disclosure</a>
+          <a href="disclosure.html">Affiliate disclosure</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero-section">
-        <div class="container hero-grid">
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">Plus-size wellness and style</p>
-            <h1>Confidence starts with the right fit.</h1>
-            <p class="lead">
-              Discover curated beauty, hair care, skin care, and fashion picks designed to celebrate shape and self-expression.
-            </p>
-            <div class="hero-actions">
-              <a href="#products" class="button primary">Shop the picks</a>
-              <a href="about.html" class="button secondary">Learn more</a>
-            </div>
+            <p class="eyebrow">A little more you, every day</p>
+            <h1>Style and beauty for every curve.</h1>
+            <p class="lead">Explore considered fashion, beauty, hair-care, and skin-care recommendations made with confidence and self-expression in mind.</p>
+            <a class="button button-primary" href="#departments">Explore categories</a>
           </div>
-
-          <div class="hero-visual">
-            <div class="hero-card card-one">
-              <span>Fashion</span>
-            </div>
-            <div class="hero-card card-two">
-              <span>Beauty</span>
-            </div>
-            <div class="hero-card card-three">
-              <span>Hair</span>
-            </div>
-          </div>
+          <div class="hero-art" aria-hidden="true"><span class="art-shape shape-1"></span><span class="art-shape shape-2"></span><span class="art-shape shape-3"></span><span class="art-word">Be<br />you.</span></div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="departments">
         <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Categories</p>
-            <h2>Shop by your beauty and style priorities</h2>
-          </div>
-
-          <div class="category-grid" aria-label="Category grid">
-            <a class="category-card" href="#fashion">
-              <span class="category-icon">✦</span>
-              <span>Fashion</span>
-            </a>
-            <a class="category-card" href="#beauty">
-              <span class="category-icon">◌</span>
-              <span>Beauty</span>
-            </a>
-            <a class="category-card" href="#hair">
-              <span class="category-icon">✧</span>
-              <span>Hair Care</span>
-            </a>
-            <a class="category-card" href="#skin">
-              <span class="category-icon">◍</span>
-              <span>Skin Care</span>
-            </a>
+          <p class="eyebrow">Explore</p>
+          <h2>Find your next favorite</h2>
+          <p class="section-intro">Browse by department. Product recommendations will appear here after real products and approved affiliate destinations have been added.</p>
+          <div class="category-grid">
+            <a class="category-card fashion-card" href="#fashion"><span class="category-kicker">01</span><strong>Fashion</strong><span>Dresses · Tops · Jeans · Activewear</span><span class="text-link">Explore fashion →</span></a>
+            <a class="category-card beauty-card" href="#beauty"><span class="category-kicker">02</span><strong>Beauty</strong><span>Face · Lips · Eyes · Tools</span><span class="text-link">Explore beauty →</span></a>
+            <a class="category-card hair-card" href="#hair-care"><span class="category-kicker">03</span><strong>Hair Care</strong><span>Shampoo · Conditioner · Treatments</span><span class="text-link">Explore hair care →</span></a>
+            <a class="category-card skin-card" href="#skin-care"><span class="category-kicker">04</span><strong>Skin Care</strong><span>Cleansers · Moisturizers · Serums · Treatments</span><span class="text-link">Explore skin care →</span></a>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt" id="products">
+      <section class="section recommendations" id="recommendations">
         <div class="container">
-          <div class="section-header split-header">
-            <div>
-              <p class="eyebrow">Recommended picks</p>
-              <h2>Curated for body confidence and everyday care</h2>
-            </div>
-            <div class="filter-bar" aria-label="Product filters">
-              <button class="filter-btn active" data-filter="all" type="button">All</button>
-              <button class="filter-btn" data-filter="fashion" type="button">Fashion</button>
-              <button class="filter-btn" data-filter="beauty" type="button">Beauty</button>
-              <button class="filter-btn" data-filter="hair" type="button">Hair</button>
-              <button class="filter-btn" data-filter="skin" type="button">Skin</button>
+          <div class="section-heading">
+            <div><p class="eyebrow">Our recommendations</p><h2>Thoughtful picks, clearly linked</h2></div>
+            <div class="filter-bar" role="group" aria-label="Filter recommendations">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-button" type="button" data-filter="fashion" aria-pressed="false">Fashion</button>
+              <button class="filter-button" type="button" data-filter="beauty" aria-pressed="false">Beauty</button>
+              <button class="filter-button" type="button" data-filter="hair-care" aria-pressed="false">Hair</button>
+              <button class="filter-button" type="button" data-filter="skin-care" aria-pressed="false">Skin</button>
             </div>
           </div>
-
-          <div id="product-grid" class="product-grid" aria-live="polite"></div>
+          <p class="affiliate-note"><strong>Affiliate disclosure:</strong> Some links may earn us a commission if you purchase, at no extra cost to you. <a href="disclosure.html">Read our disclosure</a>.</p>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <noscript><p class="empty-state">Please enable JavaScript to view recommendations. The site does not take orders or payments.</p></noscript>
         </div>
       </section>
 
-      <section class="section" id="fashion">
-        <div class="container mini-section">
-          <p class="eyebrow">Fashion</p>
-          <h2>Style that fits your shape and your life</h2>
-          <p>
-            Discover flattering fits, flowing silhouettes, and elevated basics that support confidence from day to night.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="beauty">
-        <div class="container mini-section">
-          <p class="eyebrow">Beauty</p>
-          <h2>Makeup and tools that enhance, not hide</h2>
-          <p>
-            Curated color, tools, and formulas that make beauty routines easier and more expressive.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="hair">
-        <div class="container mini-section">
-          <p class="eyebrow">Hair Care</p>
-          <h2>Healthy hair starts with thoughtful care</h2>
-          <p>
-            Gentle cleansing, nourishment, and shine support for daily styling and long-term hair health.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="skin">
-        <div class="container mini-section">
-          <p class="eyebrow">Skin Care</p>
-          <h2>Supportive routines for glow and comfort</h2>
-          <p>
-            Skin-first essentials for hydration, balance, and gentle nourishment across the day.
-          </p>
-        </div>
-      </section>
+      <section class="section department-section" id="fashion"><div class="container department-copy"><p class="eyebrow">01 · Fashion</p><h2>Clothes that meet you where you are.</h2><p>Browse dresses, tops, jeans, and activewear. Recommendations will be published only after product details, image permissions, and affiliate links are verified.</p></div></section>
+      <section class="section department-section alternate" id="beauty"><div class="container department-copy"><p class="eyebrow">02 · Beauty</p><h2>Beauty is yours to define.</h2><p>Explore face makeup, lip makeup, eye makeup, and tools—without unverified product promises.</p></div></section>
+      <section class="section department-section" id="hair-care"><div class="container department-copy"><p class="eyebrow">03 · Hair Care</p><h2>Care for your own kind of crown.</h2><p>Find shampoo, conditioner, and hair treatments from verified retailers.</p></div></section>
+      <section class="section department-section alternate" id="skin-care"><div class="container department-copy"><p class="eyebrow">04 · Skin Care</p><h2>Make room for care that feels right.</h2><p>Browse cleansers, moisturizers, serums, and skin treatments. Product-specific claims will be included only when verified.</p></div></section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-wrap">
-        <div>
-          <div class="footer-brand">PlusSizeBeauty</div>
-          <small>Fashion • Beauty • Confidence</small>
-        </div>
-
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="disclosure.html">Disclosure</a>
-          <a href="mailto:hello@plussizebeauty.example">Contact</a>
-        </nav>
-      </div>
+      <div class="container footer-layout"><div><a class="footer-brand" href="index.html">PlusSizeBeauty</a><p>Fashion • Beauty • Confidence</p><p class="footer-disclosure">Some links may be affiliate links. We may earn a commission at no additional cost to you.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="disclosure.html">Affiliate disclosure</a><a href="mailto:contact@example.com">Contact</a></nav></div>
+      <div class="container footer-bottom"><small>Retailers handle their own products, prices, orders, shipping, returns, and customer service. Please verify details on the retailer’s website.</small></div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

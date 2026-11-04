@@ -1,41 +1,42 @@
-# PlusSizeBeauty affiliate storefront
+# PlusSizeBeauty affiliate site — simple project record
 
-This repository contains a simple static affiliate storefront concept for PlusSizeBeauty. It is built as a static HTML/CSS/JS site and can be served with GitHub Pages or any static-hosting provider. It is not a full backend store or payment platform. It is intentionally an affiliate storefront meant to recommend products using clearly labeled affiliate links.
+## What the site is
 
-## Quick start
+A static website that introduces fashion, beauty, hair-care, and skin-care recommendations for plus-size women. It is intended to earn income through retailer affiliate links only. It does not sell items, take payments, store customer information, or manage shipping and returns.
 
-```bash
-python3 -m http.server 8000
-```
+## Files
 
-Then open `http://localhost:8000/`.
+- `index.html` — home page, categories, disclosure notice, and recommendation area.
+- `about.html` — plain-language description of the site.
+- `disclosure.html` — affiliate disclosure draft.
+- `styles.css` — responsive visual design.
+- `script.js` — category filtering and product card rendering.
+- `data/affiliate-products.json` — public product list. Currently empty until real approved offers are provided.
+- `data/affiliate-products-template.csv` — worksheet for collecting product and link information.
+- `docs/AFFILIATE_LAUNCH_GUIDE.md` — setup and publishing steps.
+- `docs/AFFILIATE_READINESS_AUDIT.md` — current review and blockers.
 
-## Included files
+## How to view it
 
-- `index.html` — home page and category overview
-- `about.html` — about page
-- `disclosure.html` — affiliate disclosure page
-- `styles.css` — styling
-- `script.js` — product data and filtering logic
-- `data/affiliate-products-template.csv` — product intake worksheet for future affiliate products
-- `docs/AFFILIATE_LAUNCH_GUIDE.md` — simple guide to launch and review
-- `docs/AFFILIATE_READINESS_AUDIT.md` — code audit summary
+From the repo folder, run `python3 -m http.server 8000`, then open `http://localhost:8000/`.
 
-## Important notes
+## Affiliate partners and social media
 
-- This is a static affiliate storefront concept. It does not include payment processing or a checkout cart.
-- The current sample affiliate links are placeholders like `https://example.com/...` and must be replaced with verified affiliate URLs before any public launch.
-- Add a real affiliate disclosure on every page that contains outbound recommendations, not only on a hidden page.
-- GitHub Pages or another static host can publish the site, but the repository alone cannot replace the actual retailer affiliate accounts, product inventory, legal review, or public publishing setup.
+Potential programs/platforms identified: Ulta Beauty, Sephora, Levanta, Kohl’s, Sally Beauty, and Lane Bryant. “RWJ” is unclear and has not been configured. Social channels named for future promotion are YouTube, Instagram, Facebook/Meta, and TikTok. The site does not yet have verified referral links or account/profile URLs for these channels.
 
-## Simple publishing checklist
+An application page is not an affiliate referral link. Do not claim partnership or add product cards until the program has approved the publisher and supplied valid links. Do not publish sample products or placeholder offers.
 
-1. Replace sample affiliate URLs with verified retailer links.
-2. Review affiliate-program rules and disclosures.
-3. Confirm the site uses approved image rights.
-4. Publish to GitHub Pages or another static host.
-5. Check the live URL and test each product link.
+## What still needs to happen before public launch
 
-## Downloadable record
+1. Owner applies to the actual affiliate programs and gets approved.
+2. Owner supplies a verified product name, retailer, product page/deep link with affiliate tracking, accurate description, approved image or image rights, category, and link-check date for every item.
+3. Clarify what “RWJ” means.
+4. Review the disclosure and program terms for each network and the target audience/location.
+5. Replace the example contact email with a monitored address.
+6. Verify all menu destinations, affiliate links, mobile layout, and keyboard accessibility in a browser.
+7. Enable GitHub Pages on the desired branch and verify the actual public URL/deployment.
+8. Owner approves publication.
 
-This file is the complete simple record for the project. It is intentionally written in plain language so you can save it as a record and use it during review.
+## Current readiness
+
+The site source has a functioning category filter and safe empty state, but it contains **no real affiliate offers**. Affiliate links, program approval, user social profile links, and GitHub Pages deployment have not been independently verified. Therefore it is not ready to launch as a monetized affiliate storefront yet.
