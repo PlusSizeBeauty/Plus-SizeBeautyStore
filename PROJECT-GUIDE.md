@@ -11,7 +11,7 @@ This project uses plain HTML, CSS, and JavaScript. You do not need to install pa
    python -m http.server 8000
    ```
 
-3. Open <http://localhost:8000/>. Visit `app.html` for the store directory and `qr.html` for the QR page.
+3. Open <http://localhost:8000/>. Visit `app.html` for the store and social directory and `qr.html` for the QR page.
 
 Use a local web server (not a `file://` URL) to test the app manifest and service worker.
 
@@ -23,12 +23,8 @@ Use a local web server (not a `file://` URL) to test the app manifest and servic
 4. Wait for the deployment. Copy the URL GitHub shows on the Pages settings page and open it to verify the site.
 5. Check the home page and `beauty.html`, `hair-care.html`, `skin-care.html`, `app.html`, and `qr.html`.
 
-The site uses relative paths so it can be served from a GitHub Pages project URL. The QR image comes from an external service and requires an internet connection.
+## Store and social links
 
-## Retailer buttons and affiliate links
+`app.html` links to the public Ulta Beauty and Lane Bryant store homepages. RWJ Store currently uses a web search link because its official store URL has not been provided or verified. The Facebook, Instagram, YouTube, and TikTok buttons search for PlusSizeBeauty on the platforms; replace them with official profile links when you have those URLs.
 
-`app.html` currently has buttons to the public Ulta Beauty and Lane Bryant homepages. Those public links are not confirmed affiliate-tracking URLs and may not earn commissions. After joining and being approved by an affiliate program, replace each button's `href` with the exact retailer deep link provided by that program. Test the final link and retain a clear disclosure near the links.
-
-Levanta is an affiliate platform rather than a shopper-facing store link. “RWJ” is ambiguous, so it has no button until its exact retailer name and URL are confirmed. Do not invent a retailer URL or affiliate tracking code.
-
-The current directory discloses that the site may earn commissions from qualifying purchases. The retailer handles all product information, pricing, availability, checkout, shipping, and returns.
+The store directory discloses that the site may earn commissions from qualifying purchases. The current public retailer links are not confirmed affiliate-tracking links. Retailers handle all product information, pricing, purchases, checkout, shipping, and returns.
