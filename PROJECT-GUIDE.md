@@ -1,65 +1,32 @@
-# PlusSizeBeauty Store
+# PlusSizeBeauty Store — project guide
 
-A simple, mobile-friendly storefront project with a plain-language setup guide. Everything in this repo is static and can be downloaded as a ZIP from GitHub for personal records.
+## Run it on your computer
 
-## Included files
+This project is plain HTML, CSS, and JavaScript. You do not need to install packages or run a build command.
 
-- `index.html` — home page
-- `beauty.html` — beauty category page
-- `hair-care.html` — hair care category page
-- `skin-care.html` — skincare category page
-- `styles.css` — shared site styling
-- `script.js` — language toggle and translation behavior
-- `app.html` — mobile storefront app interface
-- `app.css` — mobile app styling
-- `app.js` — demo shopping app logic with favorites and bag
-- `manifest.webmanifest` — install metadata
-- `service-worker.js` — offline caching shell for installable behavior
-- `qr.html` — QR display page
-- `qr.js` — QR-style generator logic
-- `README.md` — project overview
+1. Download the repository as a ZIP and unzip it, or clone it.
+2. Open a terminal in the project folder and run:
 
-## How to use locally
+   ```bash
+   python -m http.server 8000
+   ```
 
-1. Download this repository as a ZIP from GitHub.
-2. Unzip the folder and open `index.html` in a browser.
-3. Open `app.html` to use the mobile store interface.
-4. Open `qr.html` to view the QR-style code.
-5. To test the offline/install behavior, serve the repo through a local web server instead of opening files directly.
+3. Open <http://localhost:8000/>. Visit `app.html` for the storefront demo and `qr.html` for the QR page.
 
-## Local web server example
+Use a local web server (not a `file://` URL) to test the app manifest and service worker.
 
-If you have Python installed, run this in the project folder:
+## Publish using GitHub Pages
 
-```bash
-python -m http.server 8000
-```
+1. Open this repository's **Settings → Pages** page.
+2. Set **Source** to **Deploy from a branch**.
+3. Select `main` and `/(root)`, then select **Save**.
+4. Wait for the deployment. Copy the URL GitHub shows on the Pages settings page and open it to verify the site.
+5. Check the home page and each of `beauty.html`, `hair-care.html`, `skin-care.html`, `app.html`, and `qr.html`.
 
-Then open:
+The site uses relative paths so it can be served from a GitHub Pages project URL. The QR destination is based on the URL of the published site; displaying the QR image uses an external QR service and therefore requires internet access.
 
-- http://localhost:8000/index.html
-- http://localhost:8000/app.html
-- http://localhost:8000/qr.html
+## Before using it as a real shop
 
-## GitHub Pages publish
+This is a presentation/demo site, not an ecommerce system. The app has sample items and a local-only bag; it does not take payments, submit orders, manage inventory, or send customer information to a business. Add and test a real ecommerce/checkout provider before advertising products for sale.
 
-This repository does not currently have GitHub Pages enabled. To publish it:
-
-1. Open the repository on GitHub.
-2. Go to **Settings → Pages**.
-3. Choose **Deploy from a branch**.
-4. Select the `main` branch and the root folder.
-5. Save the settings.
-6. After deployment, update the destination URL in `qr.js` to your published HTTPS site and commit it.
-
-## Store app behavior
-
-- Search products by name or category.
-- Filter by category.
-- Save favorites in browser storage.
-- Add items to a bag and view the total.
-- Use the app on mobile screens.
-
-## Download and archive
-
-Use the GitHub **Download ZIP** button to keep a copy of the repository on your device. That ZIP is the project record for the files in this repo.
+The showcase uses remotely hosted Unsplash images and Google Fonts. Those elements need internet access and may not appear in offline mode. The service worker covers the local page/app shell, not external content.

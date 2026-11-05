@@ -71,8 +71,7 @@ function getVisibleProducts() {
 }
 
 function renderFilters() {
-  const categories = getCategories();
-  elements.categoryFilters.innerHTML = categories.map((category) => `
+  elements.categoryFilters.innerHTML = getCategories().map((category) => `
     <button class="filter-chip ${category === state.category ? 'active' : ''}" type="button" data-category="${category}">
       ${category}
     </button>
@@ -105,7 +104,7 @@ function renderProducts() {
         </div>
         <div class="product-meta">${product.category}</div>
         <div class="product-actions">
-          <button class="favorite-toggle ${state.favorites.has(product.id) ? 'active' : ''}" data-favorite-id="${product.id}" type="button" aria-label="Save ${product.name}">${state.favorites.has(product.id) ? '♥' : '♡'}</button>
+          <button class="favorite-toggle ${state.favorites.has(product.id) ? 'active' : ''}" data-favorite-id="${product.id}" type="button" aria-label="Save ${product.name}">${state.favorites.has(product.id) ? '♥ Saved' : '♡ Save'}</button>
           <button class="add-button" data-add-id="${product.id}" type="button">Add</button>
         </div>
       </div>
@@ -115,11 +114,8 @@ function renderProducts() {
   document.querySelectorAll('.favorite-toggle').forEach((button) => {
     button.addEventListener('click', () => {
       const id = Number(button.dataset.favoriteId);
-      if (state.favorites.has(id)) {
-        state.favorites.delete(id);
-      } else {
-        state.favorites.add(id);
-      }
+      if (state.favorites.has(id)) state.favorites.delete(id);
+      else state.favorites.add(id);
       saveSet(STORAGE_KEYS.favs, state.favorites);
       renderProducts();
     });
@@ -127,8 +123,7 @@ function renderProducts() {
 
   document.querySelectorAll('.add-button').forEach((button) => {
     button.addEventListener('click', () => {
-      const id = Number(button.dataset.addId);
-      const product = PRODUCTS.find((item) => item.id === id);
+      const product = PRODUCTS.find((item) => item.id === Number(button.dataset.addId));
       if (!product) return;
       state.bag.push(product);
       saveBag();
@@ -148,12 +143,9 @@ function renderBag() {
   }
 
   const total = state.bag.reduce((sum, item) => sum + item.price, 0);
-  elements.bagItems.innerHTML = state.bag.map((item, index) => `
+  elements.bagItems.innerHTML = state.bag.map((item) => `
     <div class="bag-item">
-      <div>
-        <strong>${item.name}</strong>
-        <small>${item.category}</small>
-      </div>
+      <div><strong>${item.name}</strong><small>${item.category}</small></div>
       <strong>$${item.price}</strong>
     </div>
   `).join('');
@@ -178,3 +170,11 @@ function render() {
 }
 
 render();
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js').catch((error) => {
+      console.error('Service worker registration failed:', error);
+    });
+  });
+}
