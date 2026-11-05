@@ -1,6 +1,6 @@
 # Plus-SizeBeautyStore
 
-A static, responsive storefront concept for PlusSizeBeauty, featuring fashion, beauty, hair-care, and skin-care pages plus a browser-only shopping demo.
+A static, responsive PlusSizeBeauty retailer directory for beauty, hair care, skin care, plus-size fashion, and social links. Visitors browse selected retailer sites; purchases and checkout happen on the retailer's website.
 
 ## Run locally
 
@@ -10,30 +10,30 @@ There is no build step or dependency installation. Serve the repository root wit
 python -m http.server 8000
 ```
 
-Open <http://localhost:8000/>. The additional pages are `beauty.html`, `hair-care.html`, `skin-care.html`, `app.html`, and `qr.html`. Serving the files (rather than opening them directly) lets the browser use the service worker and install metadata on localhost.
+Open <http://localhost:8000/>. The additional pages are `beauty.html`, `hair-care.html`, `skin-care.html`, `app.html`, and `qr.html`. Serving the files rather than opening them directly lets the browser use the service worker and install metadata on localhost.
 
 ## Publish with GitHub Pages
 
 1. In the repository, open **Settings → Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**.
 3. Choose branch `main` and folder `/(root)`, then save.
-4. Wait for the Pages deployment to complete; GitHub displays the published URL in the Pages settings.
-5. Visit that URL and check the home, category, app, and QR pages.
+4. Wait for the Pages deployment to complete; GitHub displays the published URL in Pages settings.
+5. Visit that URL and test the home, category, store-directory, and QR pages.
 
-The repository is configured to use relative paths for GitHub Pages project-site hosting. The QR page builds its destination from the published page URL and requests a QR image from an external QR service, so generating/scanning the image requires internet access.
+## Store and social links
 
-## What the demo does—and does not do
+The app directory links to Ulta Beauty (`https://www.ulta.com/`) and Lane Bryant (`https://www.lanebryant.com/`). These are public store homepages, not confirmed affiliate-tracking links. Replace them with approved affiliate deep links if you later obtain them.
 
-The app includes sample products, search, category filters, favorites, and a shopping bag stored in the visitor's browser. It does **not** have a real checkout, payment processing, inventory, order management, or a backend. Do not accept orders or payments through this demo.
+RWJ Store is shown by name and currently has a web search link, not a verified official store URL. Facebook, Instagram, YouTube, and TikTok buttons search for PlusSizeBeauty on those platforms; they are not confirmed social-profile links. Replace each search URL with the correct official destination when the store and brand accounts are known. Do not invent account URLs or affiliate tracking parameters.
 
-The app page includes a web manifest and registers a service worker for a basic offline app shell. Category-page photography and the display fonts are loaded from external Unsplash and Google Fonts URLs, so those assets need internet access and are not part of the offline shell.
+The page discloses that PlusSizeBeauty may earn commissions from qualifying affiliate purchases. Retailers handle product information, pricing, availability, checkout, shipping, and returns.
 
 ## Project files
 
 - `index.html` — homepage
 - `beauty.html`, `hair-care.html`, `skin-care.html` — category showcase pages
 - `styles.css`, `script.js` — shared design and language toggle
-- `app.html`, `app.css`, `app.js` — sample mobile-friendly storefront
+- `app.html`, `app.css`, `app.js` — retailer/social directory and app-shell registration
 - `manifest.webmanifest`, `service-worker.js`, `icon.svg` — app metadata, offline shell, and icon
 - `qr.html`, `qr.js` — QR page and destination/link behavior
 - `PROJECT-GUIDE.md` — plain-language setup and publish checklist

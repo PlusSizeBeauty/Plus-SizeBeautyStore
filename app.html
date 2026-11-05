@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f05f99" />
-    <meta name="description" content="PlusSizeBeauty mobile storefront app" />
-    <title>PlusSizeBeauty | Store App</title>
+    <meta name="description" content="Browse beauty and plus-size fashion retailers and social channels selected by PlusSizeBeauty." />
+    <title>PlusSizeBeauty | Shop &amp; Connect</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="app.css" />
+    <style>
+      .link-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .disclosure-note { color: var(--muted); font-size: 0.9rem; }
+    </style>
   </head>
   <body>
     <div class="app-shell">
@@ -19,55 +23,56 @@
             <div class="brand-tag">Fashion • Beauty • Confidence</div>
           </div>
         </div>
-        <button class="bag-button" type="button" aria-label="Shopping bag">
-          <span>🛍</span>
-          <span id="bagCount">0</span>
-        </button>
+        <a class="bag-button" href="index.html">Home</a>
       </header>
 
       <main class="app-main">
         <section class="hero-card">
-          <p class="eyebrow">Shop the collection</p>
-          <h1>Feel confident in every look.</h1>
-          <div class="hero-actions">
-            <a href="index.html" class="primary-link">View Brand</a>
-            <a href="qr.html" class="secondary-link">Scan QR</a>
-          </div>
+          <p class="eyebrow">Shop our picks</p>
+          <h1>Find beauty and fashion at our selected stores.</h1>
+          <p>Choose a store to browse its products, sizes, prices, and availability.</p>
         </section>
 
-        <section class="toolbar">
-          <label class="search-field" aria-label="Search products">
-            <span>⌕</span>
-            <input id="searchInput" type="search" placeholder="Search products" />
-          </label>
+        <section class="content-grid" aria-label="Retail stores">
+          <article class="catalog-panel">
+            <div class="panel-header"><h2>Beauty, skincare &amp; hair care</h2></div>
+            <p>Explore makeup, skincare, fragrance, and hair products at Ulta Beauty.</p>
+            <a class="primary-link" href="https://www.ulta.com/" target="_blank" rel="sponsored nofollow noopener">Visit Ulta Beauty ↗</a>
+          </article>
+
+          <article class="catalog-panel">
+            <div class="panel-header"><h2>Plus-size fashion</h2></div>
+            <p>Browse clothing, intimates, and accessories at Lane Bryant.</p>
+            <a class="primary-link" href="https://www.lanebryant.com/" target="_blank" rel="sponsored nofollow noopener">Visit Lane Bryant ↗</a>
+          </article>
+
+          <article class="catalog-panel">
+            <div class="panel-header"><h2>RWJ Store</h2></div>
+            <p>Search the web for RWJ Store. This is a search link, not a verified official RWJ Store website.</p>
+            <a class="primary-link" href="https://www.google.com/search?q=RWJ+Store" target="_blank" rel="noopener">Find RWJ Store ↗</a>
+          </article>
         </section>
 
-        <section class="filters" id="categoryFilters" aria-label="Product categories"></section>
-
-        <section class="content-grid">
-          <div class="catalog-panel">
-            <div class="panel-header">
-              <h2>Best Sellers</h2>
-              <span id="resultsCount">0 items</span>
-            </div>
-            <div id="productGrid" class="product-grid" aria-live="polite"></div>
-          </div>
-
-          <aside class="bag-panel" aria-label="Shopping bag">
-            <div class="panel-header">
-              <h2>Your Bag</h2>
-              <button id="clearBag" type="button" class="ghost-button">Clear</button>
-            </div>
-            <div id="bagItems" class="bag-items"></div>
-            <div class="bag-total">
-              <span>Total</span>
-              <strong id="bagTotal">$0.00</strong>
-            </div>
-          </aside>
+        <section class="catalog-panel" aria-labelledby="social-title">
+          <div class="panel-header"><h2 id="social-title">Find us on social media</h2></div>
+          <p>These links search each platform for PlusSizeBeauty; they are not confirmed profile links.</p>
+          <nav class="link-group" aria-label="Search social media for PlusSizeBeauty">
+            <a class="secondary-link" href="https://www.facebook.com/search/top?q=PlusSizeBeauty" target="_blank" rel="noopener">Facebook ↗</a>
+            <a class="secondary-link" href="https://www.instagram.com/explore/search/keyword/?q=PlusSizeBeauty" target="_blank" rel="noopener">Instagram ↗</a>
+            <a class="secondary-link" href="https://www.youtube.com/results?search_query=PlusSizeBeauty" target="_blank" rel="noopener">YouTube ↗</a>
+            <a class="secondary-link" href="https://www.tiktok.com/search?q=PlusSizeBeauty" target="_blank" rel="noopener">TikTok ↗</a>
+          </nav>
         </section>
+
+        <aside class="catalog-panel" aria-label="Affiliate disclosure">
+          <h2>Affiliate disclosure</h2>
+          <p>We may earn a commission from qualifying purchases made through affiliate links, at no extra cost to you. Ulta Beauty and Lane Bryant buttons currently go to public retailer homepages and are not confirmed affiliate-tracked links.</p>
+          <p class="disclosure-note">Retailers handle product details, pricing, availability, purchases, checkout, shipping, and returns. RWJ Store and social destinations above use search links until their official URLs or profile links are confirmed.</p>
+        </aside>
+
+        <p><a class="secondary-link" href="qr.html">View store QR page</a></p>
       </main>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>
