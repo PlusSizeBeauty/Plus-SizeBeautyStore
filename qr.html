@@ -28,7 +28,7 @@
         font-size: 1.4rem;
       }
 
-      #qrCanvas {
+      #qrImage {
         width: 100%;
         max-width: 320px;
         display: block;
@@ -42,17 +42,18 @@
         margin-top: 16px;
         color: #c33a73;
         font-weight: 700;
+        overflow-wrap: anywhere;
       }
     </style>
   </head>
   <body>
-    <div class="qr-panel">
+    <main class="qr-panel">
       <h1 class="qr-title">Scan to open the store</h1>
-      <svg id="qrCanvas" viewBox="0 0 230 230" aria-label="QR code"></svg>
+      <img id="qrImage" alt="QR code linking to the PlusSizeBeauty store" width="230" height="230" />
       <div style="text-align:center; margin-top:16px;">
-        <a class="qr-link" id="qrLink" href="https://github.com/PlusSizeBeauty/Plus-SizeBeautyStore">Open repository</a>
+        <a class="qr-link" id="qrLink" href="./">Open store</a>
       </div>
-    </div>
+    </main>
 
     <script src="qr.js"></script>
   </body>
